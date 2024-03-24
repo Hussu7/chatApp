@@ -8,7 +8,7 @@ const MessageRoom = () => {
   const [newUser, setNewUser]=useState([])
   const messageBoxHeight = useRef(null);
   let { id } = useParams();
-  const socket = useMemo(() => io("http://localhost:4000"), []);
+  const socket = useMemo(() => io("https://chatapp-nai7.onrender.com"), []);
   const handleSubmit = (e) => {
     e.preventDefault();
     socket.emit("message", { message, id });
